@@ -13,7 +13,7 @@ const Rating = ({rate = 5}) => {
     }
 
     return (
-        <div className="[&>*]:text-lg [&>*]:pr-1 [&>*]:text-yellow-400">
+        <div className="[&>*]:text-base xl:[&>*]:text-lg [&>*]:pr-1 [&>*]:text-yellow-400">
         {
             stars.map(star => (
                 <ion-icon key={Math.random()} name={star}></ion-icon>

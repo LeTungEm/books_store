@@ -4,19 +4,22 @@ const Context = createContext();
 
 function Provider({children}){
 
-    const [num, setNum] = useState(0);
+    const [search, setSearch] = useState(0);
 
-    const increateNum = () => {
-        setNum(num+1);
-    };
+    const homeContext = {
+        search,
+        setSearch
+    }
 
-    const value = {
-        num,
-        increateNum
+    const [choicedPublish, setChoice] = useState([]);
+
+    const shopContext = {
+        choicedPublish,
+        setChoice
     }
 
     return (
-        <Context.Provider value={value}>
+        <Context.Provider value={{homeContext, shopContext}}>
             {children}
         </Context.Provider>
     );
